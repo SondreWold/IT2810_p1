@@ -1,0 +1,30 @@
+.headerTitle {
+    font-family: 'Kosugi', sans-serif;
+    size: 29PX;
+    color: rgb(26, 25, 25);
+}
+
+.docuClick {
+    font-family: 'Kosugi', sans-serif;
+    size: 18PX;
+    color: rgb(26, 25, 25);
+
+}
+.docuClick:hover {
+    font-family: 'Kosugi', sans-serif;
+    size: 18PX;
+    color: dodgerblue;
+;
+    
+}
+.gridContainer {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+#art{
+    width: 50%;
+    height: 500px;
+    background-color: lightslategrey;
+}
