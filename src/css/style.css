@@ -1,21 +1,37 @@
 .headerTitle {
     font-family: 'Kosugi', sans-serif;
-    size: 29PX;
+    font-size: 29px;
     color: rgb(26, 25, 25);
 }
 
-.docuClick {
+.elementList {
     font-family: 'Kosugi', sans-serif;
-    size: 18PX;
-    color: rgb(26, 25, 25);
-
+    font-size: 18px;
 }
-.docuClick:hover {
+#littleList {
     font-family: 'Kosugi', sans-serif;
-    size: 18PX;
-    color: dodgerblue;
-;
-    
+    font-size: 14px;
+}
+
+.subHeader {
+    font-family: 'Kosugi', sans-serif;
+    font-size: 20px;
+}
+
+.docuText {
+    font-family: 'Kosugi', sans-serif;
+    font-size: 14px;
+}
+
+#docuClick {
+    font-family: 'Kosugi', sans-serif;
+    font-size: 29PX;
+    color: rgb(26, 25, 25);
+}
+
+#docuClick:hover {
+    font-family: 'Kosugi', sans-serif;
+    color: #0d8dd7;    
 }
 .gridContainer {
     display: grid;
@@ -26,5 +42,11 @@
 #art{
     width: 50%;
     height: 500px;
-    background-color: lightslategrey;
+    background-color:white;
+}
+
+.docu{
+    width: 50%;
+    height: auto;
+    background-color:white;
 }

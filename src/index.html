@@ -1,21 +1,112 @@
 <html>
     <meta charset="utf-8">
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    
-    <section class="gridContainer">
-        <div class="header">
-            <h1 class="headerTitle">
-                Stradivarius Magicus Fantasticus
-            </h1>
-        </div>
-        <div id="art"></div>
-        <div class="docu">
-            <h3 class="docuClick">Dokumentasjon</h3>
-        </div>
-    </section>
+    <body>    
+        <section class="gridContainer">
+            <div class="header">
+                <h1 class="headerTitle">
+                    "Mann med blinkende hode", av Artisto Abstracto
+                </h1> <br/>  
+            </div>
+            <div id="art">
+                <svg width="1000" height="500">
+                    <circle class="blackCircle" cx="50" cy="50" r="40" fill="black" />
+                    <circle class="blackCircle" cx="50" cy="150" r="40" fill="black" />
+                    <circle class="blackCircle" cx="50" cy="250" r="40" fill="black" />
+                    <circle class="blackCircle" cx="50" cy="350" r="40" fill="black" />
+                    <rect class="blackRect" width="50" height="50" x="125" y="25" fill = "black"/>
+                    <rect class="blackRect" width="50" height="50" x="125" y="125" fill = "black"/>
+                    <rect class="blackRect" width="50" height="50" x="125" y="225" fill = "black"/>
+                    <rect class="blackRect" width="50" height="50" x="125" y="325" fill = "black"/>
+                    <ellipse class="blackEl" cx="200" cy="50" rx="50" ry="20" fill="black" />
+                    <ellipse class="blackEl" cx="200" cy="150" rx="50" ry="20" fill="black" />
+                    <ellipse class="blackEl" cx="200" cy="250" rx="50" ry="20" fill="black" />
+                    <ellipse class="blackEl" cx="200" cy="350" rx="50" ry="20" fill="black" />
+                    <line class="blackLine" x1="335" x2="350" y1="125" y2="175" stroke-width = "8" stroke="#6f3e3e"/>
+                    <line class="blackLine2" x1="390" x2="375" y1="125" y2="175" stroke-width = "8" stroke="#a96a28"/>
+                    <rect class="blackRect2" width="50" height="50" x="550" y="25" fill = "black"/>
+                    <rect class="blackRect2" width="50" height="50" x="550" y="125" fill = "black"/>
+                    <rect class="blackRect2" width="50" height="50" x="550" y="225" fill = "black"/>
+                    <rect class="blackRect2" width="50" height="50" x="550" y="325" fill = "black"/>
+                    <ellipse class="blackEl2" cx="525" cy="50" rx="50" ry="20" fill="black" />
+                    <ellipse class="blackEl2" cx="525" cy="150" rx="50" ry="20" fill="black" />
+                    <ellipse class="blackEl2" cx="525" cy="250" rx="50" ry="20" fill="black" />
+                    <ellipse class="blackEl2" cx="525" cy="350" rx="50" ry="20" fill="black" />
+                    <circle class="blackCircle2" cx="675" cy="50" r="40" fill="black" />
+                    <circle class="blackCircle2" cx="675" cy="150" r="40" fill="black" />
+                    <circle class="blackCircle2" cx="675" cy="250" r="40" fill="black" />
+                    <circle class="blackCircle2" cx="675" cy="350" r="40" fill="black" />
+                    <circle id="blueCircle" cx="362" cy="220" r="40" fill="#1c3464" />
+                    <polygon points="250,450 363,260 479,450" fill= "#6f3e3e" />
+                    <rect width="725" height="30" x="0" y="470" fill = "black"/>
+                </svg>
+            </div>
+            <div class="docu">
+                <h3 id="docuClick">Dokumentasjon</h3>
+                <div id="docuContent">
+                    <h4 class="subHeader">Elementliste</h4>
+                    <ol class="elementList">
+                        <li>Trekant</li>
+                        <li>Sirkler i skiftende brun fargepalett (Interaktiv)</li>
+                        <li>Sirkler i skiftende grønn fargepalett (Interaktiv)</li>
+                        <li>Blå sirkel som blinker (Interaktiv)</li>
+                        <li>Bombeformede symboler i skiftende brun fargepalett (Firkant) (DobbeltInteraktiv), </li>
+                        <li>Bombeformede symboler i skiftende brun fargepalett (Ellipse) (Interaktiv), </li>
+                        <li>Bombeformede symboler i skiftende grønn fargepalett (Interaktiv)</li>
+                        <li>Diagonallinje, mørkebrun (Interaktiv)</li>
+                        <li>Diagonallinje, lysebrun (Interaktiv)</li>
+                        <li>Sort rektangel</li>
+                    </ol>
+                    <p class="docuText">
+                        Kunstverket møter oppgavekravene ved å ha 10 geometriske figurer som kan skilles enten ved form eller farge.
+                        Noen av disse elementene er også interaktive, de aller fleste skifter farge når musepekeren er over objektet, 
+                        og noen endrer posisjon ved klikk (Firkantene i bombesymbolet og de to linjene over den blå sirkelen).
+                    </p>
+                    <h4 class="subHeader">CSS Flexbox vs. CSS Grid</h4>
+                    <p class="docuText">
+                        Flexbox og Grid er ment å bedre mulighetene til å lage gode designløsninger til web ved å gjøre inndelingen av sideelementer enklere.
+                        Den største forskjellen mellom Flexbox og Grid er at førstnevnte er primært utviklet for bruk på endimensjonale layouts,
+                        mens sistnevne bør benyttes for todimensjonalitet (rader og kolonner). 
+                        I denne oppgaven var det mest hensiktsmessig å bruke grid da jeg kun har en celle pr rad,
+                        og derfor ikke trenger å forholde meg til oppdelingen innenfor hver seksjon.
+                    </p>
+                    <h4 class="subHeader">HTML Canvas og SVG</h4>
+                    <p class="docuText">
+                        Både HTML Canvas og SVG lar en skape grafikkobjekter som kan synliggjøres på en webside. 
+                        Canvas gjør som regel dette via et Javascript API som enkelt lar en lage objekter på et lerret, SVG-objekter skapes derimot tradisjonelt sett i HTML-dokumentet direkte. 
+                        Denne oppgaven lot seg lettest løse med SVG, da disse objektene får sin egen DOM som jeg kunne manipulere med JQuery. Dette gjorde det veldig lett å skape interaktive 2D-objekter. 
+                        Canvasobjekter blir konvertert til rastegrafikk ved runtime, og kan derfor ikke manipuleres direkte etter at de har blitt skapt (kan mappe x,y, men dette er tungvint).
+                    </p>
+                    <h4 class="subHeader">JQuery</h4>
+                    <p class="docuText">
+                        JQuery var et av de første Javascript-rammeverkene som ble alment utbredt, og ble primært utviklet for å forenkle klientside-skripting (Manipulasjon av DOM).
+                        Biblioteket tilbyr funksjonalitet som enkelt lar en spørre etter objekter i DOM, for og så endre attributter ved disse.
+                        Dette gjorde det lett å spørre etter SVG objektene (via ID) i kunstverket, noe som resulterte i interaktivitet.  
+                    </p>
+                    <h4 class="subHeader">Cross-browser testing</h4>
+                    <p class="docuText">
+                        Cross-browser testing er en teststrategi som går ut på å teste at en nettløsnings funksjonalitet og utseende fungerer over flere nettlesere.
+                        Dette er et viktig aspekt ved webutvikling, ettersom nettlesere ofte har en egen måte å rendere grafikk på, samt ikke alltid er like oppdatert, kan man ende opp med en løsning som fungerer i Firefox, men som kræsjer i Edge. 
+                        Denne nettsiden har blitt testet i SAFARI og CHROME, testen avslørte følgende;
+                        <ul id="littleList">
+                            <li> Den blå sirkelen blinker saktere i Safari enn i Chrome </li>
+                            <li> Tittelteksten brytes til to linjer i Safari</li>
+                        </ul>
+                    </p>
+                    <h4 class="subHeader">Kilder</h4>
+                    <p class="docuText">
+                        <ul id="littleList">
+                            <li> <a href="https://www.w3schools.com/graphics/svg_intro.asp">W3 Schools</a> </li>
+                            <li> <a href="http://learn.jquery.com/">Jquery</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/art.js"></script>
 </html>
