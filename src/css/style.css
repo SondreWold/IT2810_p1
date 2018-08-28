@@ -4,9 +4,15 @@
     color: rgb(26, 25, 25);
 }
 
+.bio {
+    width: 50%;
+    height: auto;
+    background-color:white;
+}
+
 .elementList {
     font-family: 'Kosugi', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
 }
 #littleList {
     font-family: 'Kosugi', sans-serif;
@@ -21,6 +27,15 @@
 .docuText {
     font-family: 'Kosugi', sans-serif;
     font-size: 14px;
+}
+
+.docuText {
+    font-family: 'Kosugi', sans-serif;
+    font-size: 14px;
+}
+.bioText {
+    font-family: 'Kosugi', sans-serif;
+    font-size: 15px;
 }
 
 #docuClick {
