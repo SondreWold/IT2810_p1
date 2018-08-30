@@ -68,37 +68,41 @@
                     <p class="docuText">
                         Kunstverket møter oppgavekravene ved å ha 10 geometriske figurer som kan skilles enten ved form eller farge.
                         Noen av disse elementene er også interaktive, de aller fleste skifter farge når musepekeren er over objektet, 
-                        og noen endrer posisjon ved klikk (Firkantene i bombesymbolet og de to linjene over den blå sirkelen).
+                        noen endrer posisjon ved klikk (Firkantene i bombesymbolet og de to linjene over den blå sirkelen).
                     </p>
                     <h4 class="subHeader">CSS Flexbox vs. CSS Grid</h4>
                     <p class="docuText">
                         Flexbox og Grid er ment å bedre mulighetene til å lage gode designløsninger til web ved å gjøre inndelingen av sideelementer enklere.
-                        Den største forskjellen mellom Flexbox og Grid er at førstnevnte er primært utviklet for bruk på endimensjonale layouts,
+                        Tidligere måtte utviklere basere seg på å utforme designløsninger ved hjelp av tabeller og :float-attributter, dette var knotete og skapte mye frustrasjon.
+                        Den største forskjellen mellom Flexbox og Grid er at førstnevnte primært utviklet er for bruk på endimensjonale layouts,
                         mens sistnevne bør benyttes for todimensjonalitet (rader og kolonner). 
                         I denne oppgaven var det mest hensiktsmessig å bruke grid da jeg kun har en celle pr rad,
-                        og derfor ikke trenger å forholde meg til oppdelingen innenfor hver seksjon.
+                        derfor var det ikke nødvendig å forholde seg til oppdelingen innenfor hver seksjon. Riktignok kan nevnes at hadde jeg valgt flexbox,
+                         så ville jeg sikret meg for en bredere browser-support ettersom flexbox er støttet av et større antall browser-versions.
                     </p>
                     <h4 class="subHeader">HTML Canvas og SVG</h4>
                     <p class="docuText">
-                        Både HTML Canvas og SVG lar en skape grafikkobjekter som kan synliggjøres på en webside. 
-                        Canvas gjør som regel dette via et Javascript API som enkelt lar en lage objekter på et lerret, SVG-objekter skapes derimot tradisjonelt sett i HTML-dokumentet direkte. 
-                        Denne oppgaven lot seg lettest løse med SVG, da disse objektene får sin egen DOM som jeg kunne manipulere med JQuery. Dette gjorde det veldig lett å skape interaktive 2D-objekter. 
-                        Canvasobjekter blir konvertert til rastegrafikk ved runtime, og kan derfor ikke manipuleres direkte etter at de har blitt skapt (kan mappe x,y, men dette er tungvint).
+                        Både HTML Canvas og SVG lar en skape grafikkobjekter som kan synliggjøres på en webside. Til tross for at sluttresutlatet ser relativt likt ut, er det flere viktige forskjeller som eventuelt kan utgjøre en forskjell under selve utviklingsprosessen.  
+                        Canvas brukes som regel via et Javascript API som enkelt lar en lage objekter på et lerret (canvas), SVG-objekter skapes derimot tradisjonelt sett i HTML-dokumentet direkte. 
+                        Denne oppgaven lot seg lettest løse med SVG, da disse objektene får sin egen DOM ved rendering som senere enkelt kunne manipuleres med JQuery. Dette gjorde det veldig lett å skape interaktive 2D-objekter. 
+                        Canvasobjekter blir konvertert til rastegrafikk ved runtime, og kan derfor ikke manipuleres direkte etter at de har blitt skapt (kan mappe x,y, men dette er tungvint). 
+                        Med SVG var alt som behøvdes å tilegne hver figur et klassenavn (eller id) og deretter bruke en JQuery selector til å spørre etter objektet i DOM. 
                     </p>
                     <h4 class="subHeader">JQuery</h4>
                     <p class="docuText">
                         JQuery var et av de første Javascript-rammeverkene som ble alment utbredt, og ble primært utviklet for å forenkle klientside-skripting (Manipulasjon av DOM).
                         Biblioteket tilbyr funksjonalitet som enkelt lar en spørre etter objekter i DOM, for og så endre attributter ved disse.
-                        Dette gjorde det lett å spørre etter SVG objektene (via ID) i kunstverket, noe som resulterte i interaktivitet.  
+                        Dette gjorde det lett å spørre etter SVG objektene (via ID eller klassenavn) i kunstverket, noe som resulterte i interaktivitet. 
+                        Prosjektet hadde fint latt seg gjøre uten JQuery, men det lot seg også fint gjøre med. Selectorsyntaksen i JQuery er kort og konsis og gjorde koden relativt oversiktlig ettersom dette var majoriteten av Javascript-koden som ble skrevet. 
                     </p>
                     <h4 class="subHeader">Cross-browser testing</h4>
                     <p class="docuText">
                         Cross-browser testing er en teststrategi som går ut på å teste at en nettløsnings funksjonalitet og utseende fungerer over flere nettlesere.
-                        Dette er et viktig aspekt ved webutvikling, ettersom nettlesere ofte har en egen måte å rendere grafikk på, samt ikke alltid er like oppdatert, kan man ende opp med en løsning som fungerer i Firefox, men som kræsjer i Edge. 
+                        Dette er et viktig aspekt ved webutvikling, ettersom nettlesere ofte har en egen måte å rendere grafikk på, samt ikke alltid er like oppdatert. Det er ikke usannsynlig at man ender opp med en løsning som fungerer i Firefox, men som kræsjer i Edge, derfor er det viktig å vite om slike eventuelle feil før man slipper noe ut i produksjonsstadiet. 
                         Denne nettsiden har blitt testet i SAFARI og CHROME, testen avslørte følgende;
                         <ul id="littleList">
-                            <li> Den blå sirkelen blinker saktere i Safari enn i Chrome </li>
-                            <li> Tittelteksten brytes til to linjer i Safari</li>
+                            <li> Den blå sirkelen blinker saktere i Safari enn i Chrome, uten at det er helt tydelig hvorfor dette skjer </li>
+                            <li> Tittelteksten brytes til to linjer i Safari, uavhengig av lengde på teksten. </li>
                         </ul>
                     </p>
                     <h4 class="subHeader">Kilder</h4>
